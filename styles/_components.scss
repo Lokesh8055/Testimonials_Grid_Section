@@ -1,0 +1,70 @@
+//Testimonials
+.testimonials {
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ padding: 2rem;
+ border-radius: 1rem;
+ box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.71);
+
+ &--one {
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-color: var(--moderate-violet);
+  color: var(--color-white);
+ }
+
+ &--two {
+  background-color: var(--dark-grayish-blue);
+  color: var(--color-white);
+ }
+
+ &--three,
+ &--five {
+  background-color: var(--white);
+  color: var(--color-black);
+ }
+
+ &--four {
+  background-color: var(--dark-blackish-blue);
+  color: var(--color-white);
+ }
+
+ &__reviews {
+  font-size: 2rem;
+ }
+
+ &__description {
+  font-size: 1.5rem;
+  padding: 1rem;
+  color: var(--light-gray);
+  opacity: 70%;
+
+  &--highlight {
+   color: var(--color-black);
+  }
+ }
+}
+
+//Details
+.details {
+ &__img {
+  border-radius: 50px;
+  padding: 1rem;
+  border-color: var(--dark-grayish-blue);
+ }
+
+ &__heading {
+  font-size: 1.5rem;
+ }
+
+ &__graduation {
+  font-size: 1.3rem;
+  color: var(--light-gray);
+ }
+
+ &__graduation--highlight {
+  opacity: 50%;
+ }
+}

@@ -1,0 +1,38 @@
+.container {
+ display: grid;
+ grid-template-columns: [center-start] repeat(8, [col-start] minmax(10rem, 1fr) [col-end]) [center-end];
+ grid-template-rows: repeat(2, mimmax(10rem, 1fr));
+ grid-gap: 2rem;
+
+ .testimonials {
+  &--one {
+   grid-column: center-start / col-end 4;
+  }
+
+  &--two {
+   grid-column: col-start 5 / col-end 6;
+  }
+
+  &--three {
+   grid-column: center-start / col-end 2;
+  }
+
+  &--four {
+   grid-column: col-start 3 / col-end 6;
+  }
+
+  &--five {
+   grid-column: col-start 7 / center-end;
+   grid-row: 1 / span 2;
+  }
+ }
+}
+
+//Details
+.details {
+ display: flex;
+ justify-content: flex-start;
+ & > div {
+  align-self: center;
+ }
+}
