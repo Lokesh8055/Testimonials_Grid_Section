@@ -55,10 +55,8 @@ button {
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: [center-start] ([col-start] minmax(10rem, 1fr) [col-end])[8] [center-end];
-      grid-template-columns: [center-start] repeat(8, [col-start] minmax(10rem, 1fr) [col-end]) [center-end];
-  -ms-grid-rows: (mimmax(10rem, 1fr))[2];
-      grid-template-rows: repeat(2, mimmax(10rem, 1fr));
+  -ms-grid-columns: [center-start] ([col-start] minmax(10rem, 1fr) [col-end])[auto-fill] [center-end];
+      grid-template-columns: [center-start] repeat(auto-fill, [col-start] minmax(10rem, 1fr) [col-end]) [center-end];
   grid-gap: 2rem;
 }
 
@@ -83,6 +81,18 @@ button {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   grid-row: 1 / span 2;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    -ms-grid-columns: (1fr)[8];
+        grid-template-columns: repeat(8, 1fr);
+  }
+  .container .testimonials--one, .container .testimonials--two, .container .testimonials--three, .container .testimonials--four, .container .testimonials--five {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / span 12;
+  }
 }
 
 .details {
@@ -156,7 +166,7 @@ button {
 }
 
 .details__img {
-  border-radius: 50px;
+  border-radius: 5rem;
   padding: 1rem;
   border-color: var(--dark-grayish-blue);
 }
